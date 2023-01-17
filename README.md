@@ -36,9 +36,19 @@ For the next node, the algorithm again compares the attribute value with the oth
 
 While implementing a Decision tree, the main issue arises that how to select the best attribute for the root node and for sub-nodes. So, to solve such problems there is a technique which is called as Attribute selection measure or ASM.
 
-Information Gain:
+### Information Gain:
+
 * Information gain is the measurement of changes in entropy after the segmentation of a dataset based on an attribute.
 * It calculates how much information a feature provides us about a class.
 * According to the value of information gain, we split the node and build the decision tree.
 * A decision tree algorithm always tries to maximize the value of information gain, and a node/attribute having the highest information gain is split first. It can be calculated using the below formula:
-    Information Gain= Entropy(S)- [(Weighted Avg) *Entropy(each feature)  
+    
+    > Information Gain= Entropy(S)- [(Weighted Avg) *Entropy(each feature) 
+    
+### Gini Index:
+* Gini index is a measure of impurity or purity used while creating a decision tree in the CART(Classification and Regression Tree) algorithm.
+* An attribute with the low Gini index should be preferred as compared to the high Gini index.
+* It only creates binary splits, and the CART algorithm uses the Gini index to create binary splits.
+* Gini index can be calculated using the below formula:
+
+    > Gini Index= 1- ∑jPj<sup>2</sup>
